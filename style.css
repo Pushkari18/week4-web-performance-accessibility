@@ -1,0 +1,275 @@
+/* Basic Reset */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Base Styles */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #172033;
+    background: #ffffff;
+}
+
+a {
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* Header */
+
+.site-header {
+    background: #172033;
+    color: #ffffff;
+}
+
+.navbar {
+    max-width: 1100px;
+    margin: auto;
+    padding: 1rem 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+
+/* Keyboard Focus */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #ffbf47;
+    outline-offset: 3px;
+}
+
+
+/* Hero */
+
+.hero {
+    background: #075985;
+    color: #ffffff;
+    text-align: center;
+    padding: 6rem 5%;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.15rem;
+    margin-bottom: 2rem;
+}
+
+
+/* Buttons */
+
+.button {
+    display: inline-block;
+    padding: 0.8rem 1.4rem;
+    border: 2px solid #ffffff;
+    border-radius: 6px;
+    background: #ffffff;
+    color: #075985;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: #e0f2fe;
+}
+
+
+/* Sections */
+
+.section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 4rem 5%;
+}
+
+.section h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.section > p {
+    max-width: 750px;
+}
+
+
+/* Services */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.card {
+    padding: 1.5rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background: #f8fafc;
+}
+
+.card h3 {
+    margin: 0.7rem 0;
+}
+
+.icon {
+    font-size: 2rem;
+}
+
+
+/* Accessibility Section */
+
+.accessibility {
+    background: #f1f5f9;
+}
+
+.accessibility ul {
+    max-width: 700px;
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+}
+
+.accessibility li {
+    margin-bottom: 0.5rem;
+}
+
+
+/* Form */
+
+form {
+    max-width: 600px;
+    margin-top: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #64748b;
+    border-radius: 5px;
+    font: inherit;
+}
+
+textarea {
+    resize: vertical;
+}
+
+form .button {
+    border: 2px solid #075985;
+    background: #075985;
+    color: #ffffff;
+}
+
+
+/* Footer */
+
+.site-footer {
+    padding: 1.5rem 5%;
+    background: #172033;
+    color: #ffffff;
+    text-align: center;
+}
+
+
+/* Tablet */
+
+@media (max-width: 900px) {
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        width: 100%;
+        flex-direction: column;
+        gap: 0.7rem;
+    }
+
+    .hero {
+        padding: 4rem 5%;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 3rem 5%;
+    }
+
+}
